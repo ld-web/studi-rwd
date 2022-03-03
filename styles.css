@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0em 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+body > header {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.05)),
+    url(img/bg-mobile.jpg);
+  background-position: bottom 0% right 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 3.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0.2em 0.4em;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 3rem 0em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.chinese {
+  font-family: "KaiTi", sans-serif;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.list article {
+  max-width: 370px;
+  box-shadow: 0px 2px 15px 8px #b1b1b1c7;
+}
+
+.list article .content {
+  padding: 1.2rem;
+  padding-top: 0;
+}
+
+.readMore {
+  text-decoration: none;
+  background-color: #333;
+  color: #fff;
+  padding: 0.4em 0.9em;
+  text-transform: uppercase;
+  border: 1px solid #333;
+  transition: all 0.2s ease-in-out;
+}
+
+.readMore:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.list article img {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+footer {
+  margin-top: 3rem;
+  background-color: #333;
+  color: #fff;
+  padding: 2.4rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  body > header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.05)),
+      url(img/bg-medium.jpg);
+    background-position: bottom 0% right 30%;
+    justify-content: flex-start;
+  }
+
+  h1 {
+    margin-left: 15%;
+  }
+
+  .list {
+    flex-direction: row;
+  }
+
+  .intro {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .intro:nth-of-type(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .intro > * {
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  body > header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.05)),
+      url(img/bg-desktop.jpg);
+    background-position: center;
+  }
+
+  main {
+    padding: 0em;
+  }
+}
